@@ -1,7 +1,8 @@
+import sys
 import requests
 from requests.exceptions import HTTPError
 
-url = 'http://35.189.202.84/'
+url = sys.argv[1]
 try:
     response = requests.get(url)
 

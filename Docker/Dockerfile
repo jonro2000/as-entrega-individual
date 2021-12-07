@@ -12,6 +12,3 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiar ficheros al contenedor
 COPY . .
-
-# Comando de arranque
-CMD [ "python", "./app.py" ]

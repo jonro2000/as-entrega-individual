@@ -6,3 +6,4 @@ services:
                         - "80:80"
         client:
                 build: .
+                command: [ "python", "./app.py", "http://35.189.202.84/" ]
