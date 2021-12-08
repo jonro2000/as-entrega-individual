@@ -12,6 +12,10 @@ spec:
       labels:
         component: web
     spec:
+      volumes:
+        - name: web-storage
+          persistentVolumeClaim:
+            claimName: mi-rvp
       containers:
         - name: app
           image: nginx
@@ -19,4 +23,7 @@ spec:
             - containerPort: 80
         - name: client
           image: jrodriguez225/as-entrega-individual
-          command: [ "python", "./app.py", "http://34.116.181.171/" ]
+          command: [ "python", "./app.py", "http://34.116.151.48/" ]
+          volumeMounts:
+            - name: web-storage
+              mountPath: /data
