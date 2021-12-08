@@ -7,3 +7,7 @@ services:
         client:
                 build: .
                 command: [ "python", "./app.py", "http://35.189.202.84/" ]
+                volumes:
+                        - mi-vol:/data
+volumes:
+        mi-vol:
